@@ -13,13 +13,13 @@ import os
 
 
 
-
-
-os.chdir(R'.\tradingview_interface\data-fetcher')
+os.chdir(R'.\data-fetcher')
 app = Flask(__name__)
 CORS(app= app, resources={r"*":{"origins":"*"}})
+api_key = os.environ["POLYGON_API_KEY"]
 
-client = RESTClient("7vxgQV6W1RrKc7u1s6XdRESvYTAP7C6s")
+
+client = RESTClient(api_key)
 
 last_request_time = 0
 cache = None
