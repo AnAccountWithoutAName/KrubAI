@@ -46,7 +46,7 @@ def get_list_of_agg(ticker):
     return list_of_agg
 def get_list_of_aggs_using_req(ticker):
     list_of_aggs = []
-    response = requests.get('https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/minute/2023-01-01/2024-01-01?adjusted=true&sort=asc&limit=50000&apiKey=XSf7bj5uiKc6Y9RlrqGe1uU1vUXWqn1J').json()
+    response = requests.get('https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/minute/2023-01-01/2024-01-01?adjusted=true&sort=asc&limit=50000&apiKey=').json()
     for agg in response['results']:
             list_of_aggs.append({
             "time": agg['t'] // 1000,
