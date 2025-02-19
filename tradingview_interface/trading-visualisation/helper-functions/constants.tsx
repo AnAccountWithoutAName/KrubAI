@@ -1,0 +1,5 @@
+export const GREEN: string = '#26a69a'
+export const RED: string = '#ef5350'
+export const BLACK: string = '#450C69'
+export const AREA_R: string = 'rgba(239,83,80,0.2)'
+export const AREA_G: string = 'rgba(38,166,154,0.2)'
