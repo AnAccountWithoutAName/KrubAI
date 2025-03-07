@@ -33,7 +33,7 @@ def get_list_of_agg(ticker):
     # Update request time and fetch fresh data
 
     list_of_agg = []
-    for aggs in client.list_aggs(ticker=ticker, multiplier=1, timespan="minute", from_="2023-01-01", to="2025-01-01", limit=50000):
+    for aggs in client.list_aggs(ticker=ticker, multiplier=5, timespan="minute", from_="2021-01-01", to="2025-01-01", limit=50000):
         list_of_agg.append({
             "time": aggs.timestamp // 1000,
             "open": aggs.open,
